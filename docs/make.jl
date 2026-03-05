@@ -1,11 +1,16 @@
 using Documenter, ImageUtils
 
+@warn "Some errors have been suppressed. Should be checked closely!"
+
 makedocs(
     modules = [ImageUtils],
-    format = :html,
-    checkdocs = :exports,
+    format = Documenter.HTML(prettyurls = false, size_threshold = 500000,),
     sitename = "ImageUtils.jl",
-    pages = Any["index.md"]
+    authors = "Tobias Knopp et al.",
+    pages = [
+        "Home" => "index.md","index.md"
+    ],
+    warnonly = [:missing_docs],
 )
 
 deploydocs(
