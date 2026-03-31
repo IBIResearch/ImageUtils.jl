@@ -25,7 +25,7 @@ NIfTI = "a3a9e032-41b5-5fc4-967a-a6b7a19844d3"
 [compat]
 AxisArrays = "0.4"
 ColorSchemes = "3"
-ColorVectorSpace = "0.9, 0.10"
+ColorVectorSpace = "0.9, 0.10, 0.11"
 Colors = "0.12"
 FFTW = "1.0"
 FixedPointNumbers = "0.8"
