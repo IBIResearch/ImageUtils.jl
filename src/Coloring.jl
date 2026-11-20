@@ -1,5 +1,5 @@
 export ColoringParams, colorize, blend, reorderColor, existing_cmaps, cmap,
-       overlay, linearDoge, complexColoring, RGBAGradient, important_cmaps
+       overlay, linearDodge, complexColoring, RGBAGradient, important_cmaps
 
 struct ColoringParams
   cmin::Float64
@@ -24,7 +24,7 @@ Returns the color `w1*c1 + (1-w1)*c2` that is the weighted mean of `c1` and
 """
 function weighted_color_mean(w1::Real, c1::Colorant, c2::Colorant)
     weight1 = convert(promote_type(eltype(c1), eltype(c2)),w1)
-    weight2 = weight1 >= 0 && weight1 <= 1 ? oftype(weight1,1-weight1) : throw(DomainError())
+    weight2 = weight1 >= 0 && weight1 <= 1 ? oftype(weight1,1-weight1) : throw(DomainError(w1))
     mapc((x,y)->weight1*x+weight2*y, c1, c2)
 end
 
@@ -275,7 +275,7 @@ end
 function reorderColor(image::AbstractArray{UInt8})
   imageOut = similar(image, RGB{N0f8}, size(image)[1:end-1]...)
   for l=1:length(imageOut)
-    imageOut[l] = RGB{N0f8}(reinterpret(N0f8,image[l]),reinterpret(Ufixed8,image[l+length(imageOut)]),reinterpret(N0f8,image[l+2*length(imageOut)]))
+    imageOut[l] = RGB{N0f8}(reinterpret(N0f8,image[l]),reinterpret(N0f8,image[l+length(imageOut)]),reinterpret(N0f8,image[l+2*length(imageOut)]))
   end
   imageOut
 end
