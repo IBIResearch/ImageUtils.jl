@@ -1,7 +1,7 @@
 name = "ImageUtils"
 uuid = "8ad4436d-4835-5a14-8bce-3ae014d2950b"
-authors = ["Tobias Knopp <tobias@knoppweb.de>"]
 version = "0.2.14"
+authors = ["Tobias Knopp <tobias@knoppweb.de>"]
 
 [deps]
 AxisArrays = "39de3d68-74b9-583c-8d2d-e117c070f3a9"
@@ -15,13 +15,13 @@ ImageMagick_jll = "c73af94c-d91f-53ed-93a7-00f77d67a9d7"
 Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
 Interpolations = "a98d9a8b-a2ab-59e6-89dd-64a1c18fca59"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+NIfTI = "a3a9e032-41b5-5fc4-967a-a6b7a19844d3"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 TestImages = "5e47fb64-e119-507b-a336-dd2b206d9990"
 Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
-NIfTI = "a3a9e032-41b5-5fc4-967a-a6b7a19844d3"
 
 [compat]
 AxisArrays = "0.4"
@@ -37,10 +37,10 @@ Interpolations = "0.14, 0.15, 0.16"
 NIfTI = "0.6"
 Reexport = "1.0"
 Roots = "1,2,3"
+Statistics = "1"
 TestImages = "1.3.1"
 Unitful = "1.2"
 julia = "1.10"
-
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
